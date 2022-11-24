@@ -4,7 +4,10 @@
         <field name="model">stock.picking</field>
         <field name="inherit_id" ref="delivery.view_picking_withcarrier_out_form" />
         <field name="arch" type="xml">
-            <xpath expr="//button[@name='print_return_label']/.." position='inside'>
+            <xpath
+                expr="//button[@name='action_send_confirmation_email']"
+                position='after'
+            >
                 <button
                     name="correos_express_get_label"
                     string="Print Correos Express Label"

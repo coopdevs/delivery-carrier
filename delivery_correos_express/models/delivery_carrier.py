@@ -19,7 +19,6 @@ class DeliveryCarrier(models.Model):
 
     delivery_type = fields.Selection(
         selection_add=[("correos_express", "Correos Express")],
-        ondelete={"correos_express": "set default"},
     )
     correos_express_username = fields.Char(string="Correos Express Username")
     correos_express_password = fields.Char(string="Correos Express Password")
